@@ -1,0 +1,18 @@
+body{
+    height: 100vh;
+    background-color: #777;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    /* overflow: hidden; */
+    transition: all ease-in-out;
+}
+.images img{
+    position: relative;
+    top: -50px;
+}
+
+.floor .cactus{
+    position: absolute;
+}

@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+section {
+    width: 410px;
+    height: 510px;
+    position: relative;
+    border: 4px solid transparent;
+    display: grid;
+    place-items: center;
+    border-radius: 9px;
+    /* z-index: 4; */
+    overflow: hidden;
+}
+section div{
+    border-radius: 9px;
+    width: 400px;
+    height: 500px;
+    background-color: black;
+}
+section::before,section::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(transparent,aqua ,aqua,aqua 60%,transparent,transparent);
+    z-index: -1;
+    animation: rotationBefore  ease-in-out 6s infinite forwards;
+}
+section::before{  
+    transform: translate(-50%,-50%);
+}
+section::after{
+    transform: translate(50%,55%);
+}
+@keyframes rotationBefore {
+    33%{
+         rotate:120deg;
+        }
+    66%{
+        rotate:240deg;
+    }
+    100%{
+        rotate:360deg;
+    }
+}
